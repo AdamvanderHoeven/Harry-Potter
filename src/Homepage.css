@@ -1,0 +1,20 @@
+:root {
+    --main-color: #d6700a;
+    --text-color: goldenrod;
+    --background-color: black;
+    --card-width: 300px;
+    --gap: 20px;
+    --border-radius: 8px;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --transition-duration: 0.3s;
+  }
+  
+
+  .App-header {
+    color: red;
+    font-size: 68px; 
+    font-weight: bold; 
+    text-align: center;
+    margin: 20px 0; 
+    font-family: fantasy;
+  }
