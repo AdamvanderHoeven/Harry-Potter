@@ -39,5 +39,7 @@
 
   .books-title {
     color:goldenrod;
-    
+    padding-bottom: 40px;
+    padding-top: 40px;
+    text-align: center;
 }

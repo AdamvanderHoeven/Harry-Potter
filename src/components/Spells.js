@@ -12,11 +12,20 @@ const Spells = () => {
     return <p>Error - {error.message}</p>;
   }
 
-  console.log(data);
   return (
-    <div className="spells-title">
-      <h1>Spells</h1>
-    </div>
+    <>
+      <div className="spells-title">
+        <h1>Spells</h1>
+      </div>
+      <div className="spells-container">
+        {data &&
+          data.map((spell) => (
+            <div>
+              {spell.spell} - {spell.use}
+            </div>
+          ))}
+      </div>
+    </>
   );
 };
 

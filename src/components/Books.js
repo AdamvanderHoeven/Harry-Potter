@@ -19,15 +19,14 @@ const Books = () => {
         <h1>Books</h1>
       </div>
       <div className="books-container">
-        {data &&
-          data.map((book) => (
-            <Link to={`/books/${book.title}`} key={book.index}>
-              <div className="book-card">
-                <h2>{book.title}</h2>
-                <img src={book.cover} alt={book.title} />
-              </div>
-            </Link>
-          ))}
+        {(data ?? []).map((book) => (
+          <Link to={`/books/${book.title}`} key={`book-${book.index}`}>
+            <div className="book-card">
+              <h2>{book.title}</h2>
+              <img src={book.cover} alt={book.title} />
+            </div>
+          </Link>
+        ))}
       </div>
     </>
   );
