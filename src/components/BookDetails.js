@@ -1,6 +1,6 @@
 import useBooks from "../hooks/useBooks";
 import { useParams } from "react-router-dom";
-import "./Books.css";
+import "./BookDetails.css";
 
 const BookDetails = () => {
   const { title } = useParams();
@@ -23,7 +23,7 @@ const BookDetails = () => {
   }
 
   return (
-    <div className="books-container">
+    <div className="books-container-details">
       <h1>{bookDetails.title}</h1>
       <p>{bookDetails.description}</p>
       <img src={bookDetails.cover} alt={bookDetails.title} />

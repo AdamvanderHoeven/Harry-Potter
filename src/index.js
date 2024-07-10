@@ -8,6 +8,7 @@ import Books from "./components/Books";
 import Characters from "./components/Characters";
 import BookDetails from "./components/BookDetails";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Spells from "./components/Spells";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/characters",
         element: <Characters />,
+      },
+      {
+        path: "/spells",
+        element: <Spells />,
       },
       {
         path: "/books/:title",

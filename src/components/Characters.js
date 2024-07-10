@@ -30,24 +30,29 @@ const Characters = () => {
   console.log(data);
 
   return (
-    <div className="characters-container">
-      {data &&
-        data.map((character) => (
-          <div className="character-card" key={character.index}>
-            <h2>{character.fullName}</h2>
-            <img src={character.image} alt={character.fullName} />
-            <div className="characterDetails">
-              <h3>Birthdate: {character.birthdate}</h3>
-              <h3>
-                House:
-                <span className={getHouseClass(character.hogwartsHouse)}>
-                  {character.hogwartsHouse}
-                </span>
-              </h3>
+    <>
+      <div className="characters-title">
+        <h1>Characters</h1>
+      </div>
+      <div className="characters-container">
+        {data &&
+          data.map((character) => (
+            <div className="character-card" key={character.index}>
+              <h2>{character.fullName}</h2>
+              <img src={character.image} alt={character.fullName} />
+              <div className="characterDetails">
+                <h3>Birthdate: {character.birthdate}</h3>
+                <h3>
+                  House:
+                  <span className={getHouseClass(character.hogwartsHouse)}>
+                    {character.hogwartsHouse}
+                  </span>
+                </h3>
+              </div>
             </div>
-          </div>
-        ))}
-    </div>
+          ))}
+      </div>
+    </>
   );
 };
 export default Characters;
