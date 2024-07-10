@@ -27,13 +27,14 @@ const Characters = () => {
     }
   };
 
-  console.log(data);
-
   return (
-    <div className="characters-container">
-      {data &&
-        data.map((character) => (
-          <div className="character-card" key={character.index}>
+    <>
+      <div className="characters-title">
+        <h1>Characters</h1>
+      </div>
+      <div className="characters-container">
+        {(data ?? []).map((character) => (
+          <div className="character-card" key={`character-${character.index}`}>
             <h2>{character.fullName}</h2>
             <img src={character.image} alt={character.fullName} />
             <div className="characterDetails">
@@ -47,7 +48,8 @@ const Characters = () => {
             </div>
           </div>
         ))}
-    </div>
+      </div>
+    </>
   );
 };
 export default Characters;
